@@ -1,5 +1,5 @@
 import express from 'express';
-import { getInfoUser, Register, Login, Logout, ResetKodeAkses, cekEmailAllReady, getInfoUsernameByEmail } from '../controllers/Users.js';
+import { getInfoUser, Register, Login, Logout, ResetKodeAkses, cekEmailAllReady, getInfoUsernameByEmail, lading } from '../controllers/Users.js';
 import { verifyToken } from '../middleware/VerifyToken.js';
 import { refreshToken } from '../controllers/RefreshToken.js';
 import { cekNomerRekening, cekNomerRekeningLain, getInfoUserNorek, getListBankLain, getListBankTerdaftar, getListRekening, listBank, Pajak, TambahNorekAntarBank, TambahNorekAntarRekening, Transfer } from '../controllers/Transfer.js';
@@ -7,6 +7,7 @@ import { authOtpEmail, cekLimitRequest, sendOtpEmail } from '../controllers/Emai
 
 const router = express.Router(); // router dari express
 
+router.get('/', lading);
 router.get('/users', verifyToken, getInfoUser);
 router.post('/users', Register);
 router.post('/login', Login);

@@ -327,3 +327,18 @@ export const ResetKodeAkses = async (req, res) => {
     console.log(error);
   }
 };
+
+
+export const lading = async (req, res) => {
+  try {
+    const users = await Users.findAll({
+      where: {
+        id: req.userId,
+      },
+      attributes: ['nama', 'saldo', 'no_rek'],
+    });
+    res.json(users);
+  } catch (error) {
+    console.log(error);
+  }
+}
