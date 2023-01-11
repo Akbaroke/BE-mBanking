@@ -1,7 +1,7 @@
 
 // Get infoUser
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDEzOTUxMywiZXhwIjoxNjcwMTM5NTMzfQ.YU-r5VnCNipdG-McjQUOzE4yKs3rJdaj8IlIw1qFSuk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuYW1hIjoiU3VkIFVsYW0gQ2FoeWFuYSIsInNhbGRvIjoiMCIsImlhdCI6MTY3MzQ3NzAxNywiZXhwIjoxNjczNDc3MDI3fQ.Sjx11h54NFqt_lHeVSBb3oQSvntUkBE8akzgmsBKoZc
 
 
 // Register 
