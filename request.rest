@@ -1,0 +1,221 @@
+
+// Get infoUser
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDEzOTUxMywiZXhwIjoxNjcwMTM5NTMzfQ.YU-r5VnCNipdG-McjQUOzE4yKs3rJdaj8IlIw1qFSuk
+
+
+// Register 
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "nama": "joko",
+  "email": "joko01@gmail.com",
+  "pin": "123456",
+  "jenis_card": "blue",
+  "kode_akses": "joko01",
+  "ip_address": "cdcfee3198addb0ca20e30b83efc064f"
+}
+
+
+// Login 
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "kode_akses": "yana01",
+  "ip_address": "b0c9ef1797fa162778319202c57d6e5f"
+}
+
+
+// Refrest token 
+###
+GET http://localhost:5000/token
+
+
+
+// Logout
+###
+DELETE http://localhost:5000/logout
+
+
+
+// Ganti kode akses
+###
+POST http://localhost:5000/gantikode
+Content-Type: application/json
+
+{
+  "kodeLama": "joko01",
+  "kodeBaru": "joko02",
+  "konfirmKodeBaru": "joko02",
+  "pin": "123456",
+  "email": "joko01@gmail.com",
+  "ip_address": "101.255.148.225"
+}
+
+
+// Trasnfer Saldo
+###
+POST http://localhost:5000/transfer
+Authorization: Bearer eyJh
+Content-Type: application/json
+
+{
+  "saldoTf": "100000",
+  "noTujuan": "8730647647"
+}
+
+
+// cek nomer rekening
+###
+POST http://localhost:5000/ceknomor
+Content-Type: application/json
+
+{
+  "userId": "2",
+  "no_rek": "112273622"
+}
+
+// cek nomer rekening lain
+###
+POST http://localhost:5000/ceknomorlain
+Content-Type: application/json
+
+{
+  "userId": "6",
+  "no_rek": "112273622",
+  "bank": "MANDIRI"
+}
+
+
+// tambah norek antar bank
+###
+POST http://localhost:5000/daftar_antarbank
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDE2ODY3NiwiZXhwIjoxNjcwMTY4Njk2fQ.3RiTA1b5IO5sZrfgnJavb2sRHaGFIkVGAPuL3VtcIZg
+Content-Type: application/json
+
+{
+  "no_rek": "1122411727",
+  "bank": "BNI"
+}
+
+
+// tambah norek antar rekening
+###
+POST http://localhost:5000/daftar_antarrekening
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDg0NTQ4OSwiZXhwIjoxNjcwODQ1NTA5fQ.podKMlmSxlwg_7Y3QstmlR97NjCUmhjxM2cUSQMMJqY
+Content-Type: application/json
+
+{
+  "no_rek": "8122316625"
+}
+
+
+// ambil list bank lain
+###
+POST http://localhost:5000/list_banklain
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsInNhbGRvIjoiNDAwMDAwMCIsImlhdCI6MTY3MTM2MTM2MywiZXhwIjoxNjcxMzYxMzc4fQ.bbjYEFMYEY8xW1tBXtT0QCyVu2FYO2Sm2CMBpMb6ZoQ
+Content-Type: application/json
+
+{
+  "bank": "BCA"
+}
+
+// ambil list rekening
+###
+POST http://localhost:5000/listRekening
+Content-Type: application/json
+
+{
+  "userId": 6,
+  "bank": "BNI"
+}
+
+
+// get info norek
+###
+POST http://localhost:5000/infonorek
+Content-Type: application/json
+
+{
+  "norek": "112273622"
+}
+
+// ambil list bank
+###
+GET http://localhost:5000/listbank
+
+
+
+// ambil list bank lain
+###
+POST http://localhost:5000/listBankTerdaftar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsIm5hbWEiOiJNdWhhbW1hZCBBa2JhciIsImlhdCI6MTY3MjIyMDE0NiwiZXhwIjoxNjcyMjIwMTY2fQ.zhhHYhP220KPGd1B-OJyfzuRPLAemruXyiCiVRVzeuM
+
+
+
+// otp
+###
+POST http://localhost:5000/otp
+Content-Type: application/json
+
+{
+  "nama": "Muhammad Akbar",
+  "emailTo": "akbar833oke@gmail.com",
+  "ip_address": "cdcfee3198addb0ca20e30b83efc064f"
+}
+
+
+// otp cek
+###
+POST http://localhost:5000/otp/ceklimit
+Content-Type: application/json
+
+{
+  "ip_address": "cdcfee3198addb0ca20e30b83efc064f"
+}
+
+// otp auth
+###
+POST http://localhost:5000/otp/auth
+Content-Type: application/json
+
+{
+  "emailTo": "akbaroke833@gmail.com",
+  "otpKode": "7782",
+  "ip_address": "cdcfee3198addb0ca20e30b83efc064f"
+}
+
+
+// cek email
+###
+POST http://localhost:5000/cekemail
+Content-Type: application/json
+
+{
+  "email": "akbaroke833@gmail.com"
+}
+
+
+// getInfoUsernameByEmail
+###
+POST http://localhost:5000/getInfoUsernameByEmail
+Content-Type: application/json
+
+{
+  "email": "akbaroke833@gmail.com"
+}
+
+
+// pajak
+###
+POST http://localhost:5000/pajak
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuYW1hIjoiU3VkIFVsYW0gQ2FoeWFuYSIsInNhbGRvIjoiMTAwMDAwIiwiaWF0IjoxNjczMzM4NzQ2LCJleHAiOjE2NzMzMzg3NTZ9.2BsO8kOv2gNs3aTwvVdzv9Qtgc5fKIZ005IPnXq9WG4
+
+{
+  "nominal": "2500"
+}
+
