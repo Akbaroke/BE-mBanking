@@ -15,8 +15,8 @@ try {
   console.log(error);
 }
 
-// { credentials: true, origin: 'http://localhost:3000' }
-app.use(cors());
+// { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
+app.use(cors({ credentials: true, origin: 'https://fe-m-banking.vercel.app/' }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
