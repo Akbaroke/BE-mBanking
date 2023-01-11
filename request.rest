@@ -219,3 +219,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuY
   "nominal": "2500"
 }
 
+
+###
+GET http://localhost:5000/

@@ -329,7 +329,7 @@ export const ResetKodeAkses = async (req, res) => {
 };
 
 
-export const lading = async (res) => {
+export const lading = async (req, res) => {
   try {
     const users = await Users.findAll({
       attributes: ['nama', 'saldo', 'no_rek'],
