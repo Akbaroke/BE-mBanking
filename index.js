@@ -36,7 +36,7 @@ const corsOptions ={
 // })
 
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors({"Access-Control-Allow-Origin": true}));
 app.use(cookieParser());
 app.use(router);
 
