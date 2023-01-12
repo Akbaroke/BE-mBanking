@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import db from './config/Database.js';
 import router from './routes/index.js';
+import helmet from 'helmet';
 
 dotenv.config();
 const app = express();
@@ -14,15 +15,11 @@ try {
 } catch (error) {
   console.log(error);
 }
-
-// { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
-// { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
-const corsOptions ={
-  origin: "https://fe-m-banking.vercel.app", 
-  credentials:false,            //access-control-allow-credentials:true
+const corsOptions = {
+  origin: 'https://fe-m-banking.vercel.app',
+  credentials: false, //access-control-allow-credentials:true
   // optionSuccessStatus:200,
-  
-}
+};
 
 // app.use((req, res)=>{
 //   res.setHeader("Access-Control-Allow-Origin", true)
@@ -32,11 +29,12 @@ const corsOptions ={
 //   res.setHeader('Access-Control-Allow-Origin','*');
 //   res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
 //   res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
-//   next(); 
+//   next();
 // })
 
+app.use(helmet());
 app.use(express.json());
-app.use(cors({"Access-Control-Allow-Origin": true}));
+app.use(cors());
 app.use(cookieParser());
 app.use(router);
 
