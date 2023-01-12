@@ -24,12 +24,12 @@ const corsOptions ={
   
 }
 
-app.use((req, res)=>{
-  res.setHeader("Access-Control-Allow-Origin", true)
-})
+// app.use((req, res)=>{
+//   res.setHeader("Access-Control-Allow-Origin", true)
+// })
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: "https://fe-m-banking.vercel.app"}));
 app.use(cookieParser());
 app.use(router);
 
