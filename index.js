@@ -17,7 +17,7 @@ try {
 
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
-app.use(cors());
+app.use(cors({ credentials: true}));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
