@@ -18,9 +18,9 @@ try {
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 const corsOptions ={
-  origin: "https://uptight-ox-jeans.cyclic.app/", 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200,
+  origin: "https://fe-m-banking.vercel.app", 
+  credentials:false,            //access-control-allow-credentials:true
+  // optionSuccessStatus:200,
   
 }
 
@@ -28,15 +28,15 @@ const corsOptions ={
 //   res.setHeader("Access-Control-Allow-Origin", true)
 // })
 
-app.use((req,res,next)=>{
-  res.setHeader('Access-Control-Allow-Origin','*');
-  res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-  res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
-  next(); 
-})
+// app.use((req,res,next)=>{
+//   res.setHeader('Access-Control-Allow-Origin','*');
+//   res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+//   res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+//   next(); 
+// })
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(router);
 
