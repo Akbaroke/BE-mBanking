@@ -261,9 +261,9 @@ export const Login = async (req, res) => {
     );
     // membuat http only cookie kirim ke client
     res.cookie('refreshToken', refreshToken, {
-      httpOnly: true,
+      // httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
-      // secure: true // untuk https
+      secure: true // untuk https
     });
     // kirim res ke client (fenya)
     res.json({ accessToken });
