@@ -25,7 +25,7 @@ const corsOptions ={
 }
 
 app.use((req, res)=>{
-  res.setHeader("Access-Control-Allow-Origin", "https://fe-m-banking.vercel.app/")
+  res.setHeader("Access-Control-Allow-Origin", "*")
 })
 
 app.use(express.json());
