@@ -15,10 +15,15 @@ try {
 } catch (error) {
   console.log(error);
 }
-const corsOptions = {
-  origin: 'https://fe-m-banking.vercel.app',
-  credentials: false, //access-control-allow-credentials:true
-  // optionSuccessStatus:200,
+// const corsOptions = {
+//   origin: 'https://fe-m-banking.vercel.app',
+//   credentials: false, //access-control-allow-credentials:true
+//   // optionSuccessStatus:200,
+// };
+
+const corsConfig = {
+  credentials: true,
+  origin: true,
 };
 
 // app.use((req, res)=>{
@@ -34,7 +39,7 @@ const corsOptions = {
 
 app.use(helmet());
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsConfig));
 app.use(cookieParser());
 app.use(router);
 
