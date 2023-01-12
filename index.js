@@ -18,7 +18,7 @@ try {
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 const corsOptions ={
-  origin:'https://fe-m-banking-jlrrklgee-akbaroke.vercel.app/', 
+  origin:'https://fe-m-banking.vercel.app/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
