@@ -20,11 +20,12 @@ try {
 const corsOptions ={
   origin:'https://fe-m-banking.vercel.app/', 
   credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
+  optionSuccessStatus:200,
+  
 }
+app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
-app.use(express.json());
 app.use(router);
 
 const PORT = process.env.PORT || 5000;
