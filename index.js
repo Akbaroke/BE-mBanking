@@ -25,7 +25,7 @@ const corsOptions ={
 }
 
 app.use((req, res)=>{
-  res.setHeader("Access-Control-Allow-Origin", "*")
+  res.setHeader("Access-Control-Allow-Origin", true)
 })
 
 app.use(express.json());
