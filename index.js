@@ -18,7 +18,7 @@ try {
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 // { credentials: true, origin: 'https://fe-m-banking.vercel.app/' }
 const corsOptions ={
-  origin: "*", 
+  origin: "https://uptight-ox-jeans.cyclic.app/", 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200,
   
