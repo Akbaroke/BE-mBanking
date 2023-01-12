@@ -21,22 +21,28 @@ try {
 //   // optionSuccessStatus:200,
 // };
 
-const corsConfig = {
-  credentials: true,
-  origin: true,
-};
 
 // app.use((req, res)=>{
 //   res.setHeader("Access-Control-Allow-Origin", true)
 // })
 
 // app.use((req,res,next)=>{
-//   res.setHeader('Access-Control-Allow-Origin','*');
-//   res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-//   res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
-//   next();
-// })
-
+  //   res.setHeader('Access-Control-Allow-Origin','*');
+  //   res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+  //   res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+  //   next();
+  // })
+  
+const corsConfig = {
+  credentials: true,
+  origin: true,
+};
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin','*');
+  res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+  res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+  next(); 
+})
 app.use(helmet());
 app.use(express.json());
 app.use(cors(corsConfig));
