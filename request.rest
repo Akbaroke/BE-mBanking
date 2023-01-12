@@ -1,12 +1,12 @@
 
 // Get infoUser
-GET http://localhost:5000/users
+GET https://uptight-ox-jeans.cyclic.app/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuYW1hIjoiU3VkIFVsYW0gQ2FoeWFuYSIsInNhbGRvIjoiMCIsImlhdCI6MTY3MzQ3NzAxNywiZXhwIjoxNjczNDc3MDI3fQ.Sjx11h54NFqt_lHeVSBb3oQSvntUkBE8akzgmsBKoZc
 
 
 // Register 
 ###
-POST http://localhost:5000/users
+POST https://uptight-ox-jeans.cyclic.app/users
 Content-Type: application/json
 
 {
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 // Login 
 ###
-POST http://localhost:5000/login
+POST https://uptight-ox-jeans.cyclic.app/login
 Content-Type: application/json
 
 {
@@ -32,19 +32,19 @@ Content-Type: application/json
 
 // Refrest token 
 ###
-GET http://localhost:5000/token
+GET https://uptight-ox-jeans.cyclic.app/token
 
 
 
 // Logout
 ###
-DELETE http://localhost:5000/logout
+DELETE https://uptight-ox-jeans.cyclic.app/logout
 
 
 
 // Ganti kode akses
 ###
-POST http://localhost:5000/gantikode
+POST https://uptight-ox-jeans.cyclic.app/gantikode
 Content-Type: application/json
 
 {
@@ -59,7 +59,7 @@ Content-Type: application/json
 
 // Trasnfer Saldo
 ###
-POST http://localhost:5000/transfer
+POST https://uptight-ox-jeans.cyclic.app/transfer
 Authorization: Bearer eyJh
 Content-Type: application/json
 
@@ -71,7 +71,7 @@ Content-Type: application/json
 
 // cek nomer rekening
 ###
-POST http://localhost:5000/ceknomor
+POST https://uptight-ox-jeans.cyclic.app/ceknomor
 Content-Type: application/json
 
 {
@@ -81,7 +81,7 @@ Content-Type: application/json
 
 // cek nomer rekening lain
 ###
-POST http://localhost:5000/ceknomorlain
+POST https://uptight-ox-jeans.cyclic.app/ceknomorlain
 Content-Type: application/json
 
 {
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 // tambah norek antar bank
 ###
-POST http://localhost:5000/daftar_antarbank
+POST https://uptight-ox-jeans.cyclic.app/daftar_antarbank
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDE2ODY3NiwiZXhwIjoxNjcwMTY4Njk2fQ.3RiTA1b5IO5sZrfgnJavb2sRHaGFIkVGAPuL3VtcIZg
 Content-Type: application/json
 
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 // tambah norek antar rekening
 ###
-POST http://localhost:5000/daftar_antarrekening
+POST https://uptight-ox-jeans.cyclic.app/daftar_antarrekening
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsImlhdCI6MTY3MDg0NTQ4OSwiZXhwIjoxNjcwODQ1NTA5fQ.podKMlmSxlwg_7Y3QstmlR97NjCUmhjxM2cUSQMMJqY
 Content-Type: application/json
 
@@ -116,7 +116,7 @@ Content-Type: application/json
 
 // ambil list bank lain
 ###
-POST http://localhost:5000/list_banklain
+POST https://uptight-ox-jeans.cyclic.app/list_banklain
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWEiOiJtdWhhbW1hZCBha2JhciIsInNhbGRvIjoiNDAwMDAwMCIsImlhdCI6MTY3MTM2MTM2MywiZXhwIjoxNjcxMzYxMzc4fQ.bbjYEFMYEY8xW1tBXtT0QCyVu2FYO2Sm2CMBpMb6ZoQ
 Content-Type: application/json
 
@@ -126,7 +126,7 @@ Content-Type: application/json
 
 // ambil list rekening
 ###
-POST http://localhost:5000/listRekening
+POST https://uptight-ox-jeans.cyclic.app/listRekening
 Content-Type: application/json
 
 {
@@ -137,7 +137,7 @@ Content-Type: application/json
 
 // get info norek
 ###
-POST http://localhost:5000/infonorek
+POST https://uptight-ox-jeans.cyclic.app/infonorek
 Content-Type: application/json
 
 {
@@ -146,20 +146,20 @@ Content-Type: application/json
 
 // ambil list bank
 ###
-GET http://localhost:5000/listbank
+GET https://uptight-ox-jeans.cyclic.app/listbank
 
 
 
 // ambil list bank lain
 ###
-POST http://localhost:5000/listBankTerdaftar
+POST https://uptight-ox-jeans.cyclic.app/listBankTerdaftar
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsIm5hbWEiOiJNdWhhbW1hZCBBa2JhciIsImlhdCI6MTY3MjIyMDE0NiwiZXhwIjoxNjcyMjIwMTY2fQ.zhhHYhP220KPGd1B-OJyfzuRPLAemruXyiCiVRVzeuM
 
 
 
 // otp
 ###
-POST http://localhost:5000/otp
+POST https://uptight-ox-jeans.cyclic.app/otp
 Content-Type: application/json
 
 {
@@ -171,7 +171,7 @@ Content-Type: application/json
 
 // otp cek
 ###
-POST http://localhost:5000/otp/ceklimit
+POST https://uptight-ox-jeans.cyclic.app/otp/ceklimit
 Content-Type: application/json
 
 {
@@ -180,7 +180,7 @@ Content-Type: application/json
 
 // otp auth
 ###
-POST http://localhost:5000/otp/auth
+POST https://uptight-ox-jeans.cyclic.app/otp/auth
 Content-Type: application/json
 
 {
@@ -192,7 +192,7 @@ Content-Type: application/json
 
 // cek email
 ###
-POST http://localhost:5000/cekemail
+POST https://uptight-ox-jeans.cyclic.app/cekemail
 Content-Type: application/json
 
 {
@@ -202,7 +202,7 @@ Content-Type: application/json
 
 // getInfoUsernameByEmail
 ###
-POST http://localhost:5000/getInfoUsernameByEmail
+POST https://uptight-ox-jeans.cyclic.app/getInfoUsernameByEmail
 Content-Type: application/json
 
 {
@@ -212,7 +212,7 @@ Content-Type: application/json
 
 // pajak
 ###
-POST http://localhost:5000/pajak
+POST https://uptight-ox-jeans.cyclic.app/pajak
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuYW1hIjoiU3VkIFVsYW0gQ2FoeWFuYSIsInNhbGRvIjoiMTAwMDAwIiwiaWF0IjoxNjczMzM4NzQ2LCJleHAiOjE2NzMzMzg3NTZ9.2BsO8kOv2gNs3aTwvVdzv9Qtgc5fKIZ005IPnXq9WG4
 
 {
@@ -221,4 +221,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEzLCJuY
 
 
 ###
-GET http://localhost:5000/
+GET https://uptight-ox-jeans.cyclic.app/
+
+
+
