@@ -18,10 +18,9 @@ export const sendOtpEmail = async (req, res) => {
   const otp = generateRandomNumber();
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use TLS
+    port: 587,
+    secure: false, // use TLS
     auth: {
-      type: "OAuth2",
       user: process.env.EMAIL_ADDRESS_BOT,
       pass: process.env.EMAIL_PASSWORD_BOT,
     },
