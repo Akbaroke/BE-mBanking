@@ -269,6 +269,8 @@ export const Login = async (req, res) => {
     // kirim res ke client (fenya)
     res.json({ accessToken });
   } catch (error) {
+    console.log(kode_akses, ip_address)
+    console.log(error)
     res.status(404).json({ msg: 'Kode akses anda salah.' });
   }
 };
