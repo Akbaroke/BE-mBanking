@@ -129,7 +129,7 @@ export const Register = async (req, res) => {
     await Users.create({
       nama: nama,
       email: email,
-      pin: hashPin,
+      pin: pin,
       saldo: saldo,
       jenis_card: jenis_card,
       no_rek: no_rek,
