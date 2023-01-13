@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import db from './config/Database.js';
 import router from './routes/index.js';
-import helmet from 'helmet';
+// import helmet from 'helmet';
 
 dotenv.config();
 const app = express();
@@ -37,13 +37,13 @@ const corsConfig = {
   credentials: true,
   origin: true,
 };
-app.use((req,res,next)=>{
-  res.setHeader('Access-Control-Allow-Origin','*');
-  res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-  res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
-  next(); 
-})
-app.use(helmet());
+// app.use((req,res,next)=>{
+//   res.setHeader('Access-Control-Allow-Origin','*');
+//   res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+//   res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
+//   next(); 
+// })
+// app.use(helmet());
 app.use(express.json());
 app.use(cors(corsConfig));
 app.use(cookieParser());
